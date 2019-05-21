@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Profile from "./components/Profile"
 import Form from "./components/Form"
-import "./index.css";
+import styles from  "./index.css";
 
 class App extends React.Component {
     constructor(props) {
