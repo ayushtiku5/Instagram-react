@@ -1,7 +1,7 @@
 import React from "react";
 import InputField from "./InputField"
 import Button from "./Button"
-import '../index.css';
+import styles from '../index.css';
 
 
 
@@ -15,10 +15,10 @@ export default class Form extends React.Component {
                 <fieldset style={{borderStyle: 'none'}}>
                     {formFields}
                 </fieldset>
-                <div className="errorSection">
+                <div className={styles.errorSection}>
                     <p style={{color: 'red', fontSize: '15px'}}>{this.props.errorMessage}</p>
                 </div>
-                <div className="submitButtonContainer">
+                <div className={styles.submitButtonContainer}>
                     <Button type="submit" content={this.props.submitContent} />
                 </div>
             </form>

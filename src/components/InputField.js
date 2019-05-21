@@ -1,5 +1,5 @@
 import React from "react";
-import '../index.css';
+import styles from '../index.css';
 
 
 export default class InputField extends React.Component {
@@ -8,7 +8,7 @@ export default class InputField extends React.Component {
         return (
             <label>
                 {this.props.label}
-                <input onChange={this.props.onChange} type={type} name={this.props.label} className="inputField" required/>
+                <input onChange={this.props.onChange} type={type} name={this.props.label} className={styles.inputField} required/>
             </label>
         );
     }

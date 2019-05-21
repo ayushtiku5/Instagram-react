@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button"
 import Image from "./Image"
 import UserBox from "./UserBox"
-import '../index.css';
+import styles from '../index.css';
 export default class Profile extends React.Component {
     constructor(props) {
         super(props);
@@ -36,21 +36,21 @@ export default class Profile extends React.Component {
     render(){
         const profilePic = this.props.profilePic ? this.props.profilePic : this.props.defaultPic ;
         return (
-            <div className = "profileContainer">
-                <div className = "profilePicContainer">
+            <div className = {styles.profileContainer}>
+                <div className = {styles.profilePicContainer}>
                     <Image isRounded={true} url={profilePic} />
                 </div>
-                <div className = "bioContainer">
-                    <div className="rowContainer1">
+                <div className = {styles.bioContainer}>
+                    <div className={styles.rowContainer1}>
                     <UserBox boldContent="" textContent = {"@"+this.props.user} />
                     <Button content={this.state.followStatus} onClick={this.handleFollow} type="button"/>
                     </div>
-                    <div className="rowContainer1">
+                    <div className={styles.rowContainer1}>
                         <UserBox boldContent={this.state.posts} textContent="posts" />
                         <UserBox boldContent={this.state.followers} textContent="followers" />
                         <UserBox boldContent={this.state.following} textContent="following" />
                     </div>
-                    <div className="rowContainer2">
+                    <div className={styles.rowContainer2}>
                         <p style={{fontSize: '20px',fontWeight: '500'}}>Ayush Jain: competitive programmer, anime lover.<br />“If you use your head, you won’t get fat even if you eat sweets.” – L Lawliet</p>
                     </div>
                 </div>

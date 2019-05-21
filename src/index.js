@@ -41,11 +41,11 @@ class App extends React.Component {
     }
     render() {
         const loginPage = (
-            <div className="loginContainer">
-                <div className="descriptionContainer">
+            <div className={styles.loginContainer}>
+                <div className={styles.descriptionContainer}>
                     <p>Login into Instagram</p>
                 </div>
-                <div className="loginFormContainer">
+                <div className={styles.loginFormContainer}>
                     <Form onChange={this.handleChange} credentials={formCredentials} onSubmit={this.handleSubmit} errorMessage={this.state.errorMessage} submitContent={submitContent}/>
                 </div>
             </div>

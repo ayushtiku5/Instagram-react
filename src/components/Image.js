@@ -1,19 +1,13 @@
 import React from "react";
-
+import styles from '../index.css';
 
 
 export default class Image extends React.Component {
     render() {
-        const imgStyle = {
-            height: '200px',
-            width: '200px',
-            
-        };        
-        if(Boolean(this.props.isRounded)) {
-            imgStyle["borderRadius"] = '50%';
-        }
+        
+        const style = this.props.isRounded ? styles.imgRounded : styles.imgStyle ;
         return (
-            <img src = {this.props.url} style = {imgStyle}/>
+            <img src = {this.props.url} className={style}/>
         );
     }
 }
